@@ -93,6 +93,17 @@ public class RadioTest {
     }
 
     @Test
+    public void shouldSetNumberWaveThird(){
+        Radio wave = new Radio();
+        wave.setNumberWave(-1);
+
+        int expected = 0;
+        int actual = wave.getCurrentWave();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldSetNextWaveFirst() {
         Radio wave = new Radio();
         wave.setCurrentWave(1);
